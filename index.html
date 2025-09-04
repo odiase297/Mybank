@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noel Bank</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Login Page -->
+  <div id="login-page" class="page active">
+    <div class="login-box">
+      <h1>Noel Bank</h1>
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <button onclick="login()">Login</button>
+      <p id="login-error" class="error"></p>
+    </div>
+  </div>
+
+  <!-- Dashboard -->
+  <div id="dashboard-page" class="page">
+    <header class="topbar">
+      <h2>Noel Bank</h2>
+      <div class="actions">
+        <button onclick="toggleDarkMode()">🌓</button>
+        <button onclick="logout()">Logout</button>
+      </div>
+    </header>
+
+    <section class="balance-card">
+      <p>Available Balance</p>
+      <h1 id="balance">$400,000,000.00</h1>
+      <p class="account-name">Account Holder: Noel</p>
+    </section>
+
+    <section class="quick-actions">
+      <button onclick="showSend()">Send Money</button>
+      <button onclick="showReceive()">Receive Money</button>
+      <button onclick="showTransactions()">Transactions</button>
+    </section>
+
+    <section id="transactions-section" class="transactions">
+      <h3>Transaction History</h3>
+      <ul id="transaction-list"></ul>
+    </section>
+  </div>
+
+  <!-- Send Money Modal -->
+  <div id="send-modal" class="modal">
+    <div class="modal-content">
+      <h3>Send Money</h3>
+      <input type="text" id="send-to" placeholder="Recipient" />
+      <input type="number" id="send-amount" placeholder="Amount" />
+      <button onclick="sendMoney()">Send</button>
+      <button class="close" onclick="closeModal('send-modal')">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Receive Modal -->
+  <div id="receive-modal" class="modal">
+    <div class="modal-content">
+      <h3>Receive Money</h3>
+      <input type="number" id="receive-amount" placeholder="Amount" />
+      <button onclick="receiveMoney()">Receive</button>
+      <button class="close" onclick="closeModal('receive-modal')">Cancel</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
