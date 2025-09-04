@@ -1,0 +1,168 @@
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f9;
+  color: #222;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+/* Login */
+.login-box {
+  max-width: 350px;
+  margin: 80px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.login-box input {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+}
+
+/* Dashboard */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: #0066cc;
+  color: white;
+}
+
+.balance-card {
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.balance-card h1 {
+  margin: 10px 0;
+  color: #0066cc;
+}
+
+.quick-actions {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.quick-actions button {
+  flex: 1;
+  margin: 5px;
+  padding: 15px;
+  background: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.transactions {
+  background: #fff;
+  margin: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.transactions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.transactions li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 8px 0;
+}
+
+/* Modals */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: #fff;
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.modal-content input {
+  display: block;
+  width: 95%;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.modal-content button {
+  padding: 10px 15px;
+  margin: 5px;
+  background: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+button.close {
+  background: #999;
+}
+
+/* Dark mode */
+body.dark {
+  background: #121212;
+  color: #eee;
+}
+
+body.dark .topbar {
+  background: #333;
+}
+
+body.dark .balance-card,
+body.dark .transactions,
+body.dark .login-box,
+body.dark .modal-content {
+  background: #1f1f1f;
+  color: #eee;
+}
+
+body.dark .quick-actions button {
+  background: #333;
+}
